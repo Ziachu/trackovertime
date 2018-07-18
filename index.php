@@ -6,13 +6,13 @@
 
     <title>Track Over Time</title>
 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/base.css" />
     <link rel="stylesheet" type="text/css" href="./css/calendar.css" />
     <link rel="stylesheet" type="text/css" href="./css/popup.css" />
   </head>
   <body>
 
-    <?php // TODO: show calendar (empty if first visit) ?>
     <section class="calendar-wrap">
       <?php
         // get the amount of days in month
@@ -21,7 +21,9 @@
         // display box for every single day
         for ($i = 0; $i < $days_in_month; $i++) {
           $classes = array('day-wrap');
+          $inactive = false;
 
+          // if first day of month
           if ($i == 0) {
             switch (date('N', mktime(0, 0, 0, date('n'), 0, date('Y')))) {
               case '0': array_push($classes, 'monday');     break;
@@ -34,13 +36,22 @@
             }
           }
 
+          // if day after current day
+          if ($i + 1 > date('j')) {
+            $inactive = true;
+            array_push($classes, 'inactive');
+          }
+
           $classes_code = implode(' ', $classes);
-          echo '<div class="' . $classes_code . '"><span class="day-number">' . ($i + 1) . '</span></div>';
+          echo '<div class="' . $classes_code . '">';
+          echo '<span class="day-number">' . ($i + 1) . '</span>';
+
+          if (rand(0, 1) && !$inactive) {
+            echo '<i class="material-icons day-completed-mark">check_circle_outline</i></span>';
+          }
+
+          echo '</div>';
         }
-
-        // place first box in right position
-
-
       ?>
     </section>
 
