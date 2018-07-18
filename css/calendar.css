@@ -1,0 +1,67 @@
+/*
+WRAPPERS
+*/
+
+
+/*
+----------------
+--- WRAPPERS ---
+----------------
+ */
+
+.calendar-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  /* margin-top: 5vh; */
+  padding: 0 1vw;
+  position: relative;
+  width: 98vw;
+}
+
+.calendar-wrap::before {
+  background-color: #c7c7c7;
+  content: '';
+  height: 5vh;
+  position: absolute;
+    top:-5vh;
+    right: 0;
+    left: 0;
+}
+
+.day-wrap {
+  background-color: #fff;
+  box-shadow: 2px 2px 2px -2px rgba(0, 0, 0, .3);
+  height: 120px;
+  margin: 10px 1vw 0 0;
+  position: relative;
+  width: 13vw;
+}
+
+.day-wrap.monday    { margin-left: 0; }
+.day-wrap.tuesday   { margin-left: 14vw; }
+.day-wrap.wednesday { margin-left: 28vw; }
+.day-wrap.thursday  { margin-left: 42vw; }
+.day-wrap.friday    { margin-left: 56vw; }
+.day-wrap.saturday  { margin-left: 70vw; }
+.day-wrap.sunday    { margin-left: 84vw; }
+
+.day-number {
+  align-items: center;
+  background-color: #8aacc8;
+  box-shadow: 4px 3px 5px inset rgba(0, 0, 0, .3);
+  border-radius: 50%;
+  color: #fafafa;
+  display: flex;
+  font-size: 24px;
+  height: 35px;
+  justify-content: center;
+  line-height: 1em;
+  padding: 5px;
+  position: absolute;
+    top: 5px;
+    right: 5px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+  width: 35px;
+}
