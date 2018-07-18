@@ -6,6 +6,7 @@
 
     <title>Track Over Time</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Amiko:400,700&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/base.css" />
     <link rel="stylesheet" type="text/css" href="./css/calendar.css" />
@@ -56,8 +57,10 @@
     </section>
 
     <?php // TODO: show pop-up "Dodaj wyzwanie" if first visit ever ?>
-
     <?php // TODO: show pop-up "Wyzwanie opanowane?" if first visit after deadline ?>
+    <section class="popup-wrap">
+      <p class="popup-name"><a href="#">Dodaj pierwsze wyzwanie!</a></p>
+    </section>
 
     <script src="./js/storage.js"></script>
     <script src="./js/calendar.js"></script>

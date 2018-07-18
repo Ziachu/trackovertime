@@ -34,7 +34,8 @@ body {
 */
 
 body {
-  font-family: Arial;
+  /* font-family: Arial; */
+  font-family: 'Amiko', sans-serif;
   font-size: 16px;
 }
 

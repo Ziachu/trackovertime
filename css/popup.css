@@ -1,0 +1,33 @@
+.popup-wrap {
+  animation: scaleUp 3s infinite;
+  background-color: #8aacc8;
+  border: 1px solid rgba(160, 160, 160, .1);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: 2px 2px 2px -2px rgba(0, 0, 0, .3);
+  position: fixed;
+    right: 15%;
+    bottom: 0;
+  transition: background-color .3s;
+}
+
+.popup-wrap:hover {
+  background-color: #7092ba;
+}
+
+.popup-wrap a {
+  color: #fff;
+  display: block;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 1em 4em;
+  text-decoration: none;
+}
+
+@keyframes scaleUp {
+  0%    { transform: scale(1); }
+  15%    { transform: scale(1.2); }
+  25%   { transform: scale(1.4); }
+  85%  { transform: scale(1.2); }
+  100%  { transform: scale(1s); }
+}
