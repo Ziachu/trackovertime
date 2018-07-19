@@ -27,6 +27,11 @@ body {
   background: linear-gradient(to left, #fafafa, #f0f0f0);
 }
 
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 /*
 ---------------------
 --- 2. TYPOGRAHPY ---
