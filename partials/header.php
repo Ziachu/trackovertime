@@ -11,5 +11,6 @@
     <link rel="stylesheet" type="text/css" href="./css/base.css" />
     <link rel="stylesheet" type="text/css" href="./css/calendar.css" />
     <link rel="stylesheet" type="text/css" href="./css/popup.css" />
+    <link rel="stylesheet" type="text/css" href="./css/add.css" />
   </head>
   <body>
