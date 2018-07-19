@@ -10,7 +10,7 @@
 
       <div class="input-wrap">
         <p>Data rozpoczęcia:</p>
-        <input type="date" id="challenge-start-date" />
+        <input type="date" id="challange-start-date" />
       </div>
 
       <div class="input-wrap">
