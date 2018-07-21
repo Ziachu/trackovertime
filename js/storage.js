@@ -1,5 +1,6 @@
-document.addEventListener('DOMContentLoaded', function() {
+init_challanges();
 
+document.addEventListener('DOMContentLoaded', function() {
 
   var submit_button = document.getElementsByClassName('submit-button')[0];
   submit_button.addEventListener('click', function() {
@@ -17,8 +18,33 @@ document.addEventListener('DOMContentLoaded', function() {
       challangeColor: challange_color
     };
 
-    console.log(challange);
+    add_challange(challange);
   })
 
 
 });
+
+function init_challanges() {
+  if (localStorage.getItem('challanges') === null)
+    localStorage.setItem('challanges', JSON.stringify({}));
+}
+
+function get_challanges() {
+  var challanges = localStorage.getItem('challanges');
+  return JSON.parse(challanges);
+}
+
+function set_challanges(challanges) {
+  localStorage.setItem('challanges', JSON.stringify(challanges));
+}
+
+function add_challange(challange) {
+  var challanges = get_challanges();
+  var tmp_name = challange.challangeName.trim().toLowerCase().replace(new RegExp(' ', 'g'), '-');
+  console.log('add_challange(): ' + tmp_name);
+
+  challanges[tmp_name] = challange;
+
+  set_challanges(challanges);
+  console.log('add_challange');
+}
