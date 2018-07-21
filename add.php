@@ -27,6 +27,8 @@
 
       <div class="submit-wrap">
         <p class="submit-button">Zapisz!</p>
+        <p class="info-success">Udało się</p>
+        <p class="info-fail">Coś poszło nie tak</p>
       </div>
     </section>
 
